@@ -1,9 +1,13 @@
 <template>
   <div>
     <header>
-      <slot name="header"></slot>
+      <slot name="header">
+        <h1>Default title</h1>
+      </slot>
     </header>
-    <slot></slot>
+    <slot>
+      <p>Default title</p>
+    </slot>
   </div>
 </template>
 

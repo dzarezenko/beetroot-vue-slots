@@ -1,12 +1,12 @@
 <template>
   <div id="app">
 
-    <card v-for="card in cards" :key="card.title">
+    <card v-for="(card, idx) in cards" :key="card.title">
       <template #header>
-        <h1>{{ card.title }}</h1>
+        <h1 v-if="idx != 0">{{ card.title }}</h1>
       </template>
       <template #default>
-        <p :style="`color: ${card.color}`">{{ card.text }}</p>
+        <p v-if="idx != 1" :style="`color: ${card.color}`">{{ card.text }}</p>
       </template>
     </card>
     
