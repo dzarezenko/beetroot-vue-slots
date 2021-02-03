@@ -1,11 +1,11 @@
 <template>
   <div>
     <header>
-      <slot name="header">
+      <slot v-if="$slots.header" name="header">
         <h1>Default title</h1>
       </slot>
     </header>
-    <slot>
+    <slot v-if="$slots.default">
       <p>Default title</p>
     </slot>
   </div>
@@ -16,7 +16,10 @@ export default {
   props: {
     title: String,
     text: String,
-  }
+  },
+  mounted() {
+    console.log(this.$slots);
+  },
 }
 </script>
 

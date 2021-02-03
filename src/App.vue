@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <card v-for="(card, idx) in cards" :key="card.title">
+    <card v-for="(card, idx) in cards" :key="idx">
       <template #header>
         <h1 v-if="idx != 0">{{ card.title }}</h1>
       </template>
