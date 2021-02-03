@@ -1,9 +1,9 @@
 <template>
   <div>
     <header>
-      <h1>{{ title }}</h1>
+      <slot name="header"></slot>
     </header>
-    <p>{{ text }}</p>
+    <slot></slot>
   </div>
 </template>
 
